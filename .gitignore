@@ -1,0 +1,23 @@
+# Environments
+venv/
+env/
+.venv/
+
+# Environment variables (SANGAT PENTING: Jangan sampai password database bocor)
+.env
+
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest & Coverage (Jika nanti kamu membuat unit testing)
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editor / OS-specific files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
