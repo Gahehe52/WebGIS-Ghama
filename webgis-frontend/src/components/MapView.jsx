@@ -158,13 +158,13 @@ function MapView() {
         )}
 
         {kecelakaan && (
-          <LayersControl.Overlay name="Data Kecelakaan">
+          <LayersControl.Overlay checked name="Data Kecelakaan">
             <GeoJSON data={kecelakaan} pointToLayer={pointKecelakaan} onEachFeature={onEachKecelakaan} />
           </LayersControl.Overlay>
         )}
 
         {parkir && (
-          <LayersControl.Overlay name="Lokasi Parkir">
+          <LayersControl.Overlay checked name="Lokasi Parkir">
             <GeoJSON data={parkir} pointToLayer={pointParkir} onEachFeature={onEachParkir} />
           </LayersControl.Overlay>
         )}
