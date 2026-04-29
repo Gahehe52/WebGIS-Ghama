@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from database import get_pool, close_pool
 from routers import halte, rute, wilayah, kecelakaan, parkir, auth
+from routers import halte, rute, wilayah, kecelakaan, parkir, auth, ai_detection
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -33,6 +34,7 @@ app.include_router(rute.router)
 app.include_router(wilayah.router)
 app.include_router(kecelakaan.router)
 app.include_router(parkir.router)
+app.include_router(ai_detection.router)
 
 @app.get("/", tags=["Root"])
 async def root():
